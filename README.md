@@ -4,7 +4,7 @@
 
 # デモ
 
-![画像の説明](ひとこと掲示板イメージ.png "ひとこと掲示板イメージ")
+![画像の説明](hitokoto.png "ひとこと掲示板イメージ")
 
 「名前」と「本文」を入力し、投稿することできます。
 
@@ -21,14 +21,14 @@ MySQL Ver 8.0.21
 pip3コマンドをインストールします。
 
 ```bash
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-sudo python3 get-pip.py
+$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+$ sudo python3 get-pip.py
 ```
 
 pip3コマンドでmysqlclientをインストールします。
 
 ```bash
-pip3 install mysqlclient
+$ pip3 install mysqlclient
 ```
 
 userdir.confのOptionsにExecCGIを追加します。
@@ -40,14 +40,23 @@ Options ExecCGI MultiViews Indexes
 CGIモジュールを有効にします。
 
 ```bash
-sudo a2enmod cgi
-sudo systemctl restart apache2
+$ sudo a2enmod cgi
+$ sudo systemctl restart apache2
 ```
 
 ~/public_html/.htaccessを以下の内容で作成します。
 
 ```bash
 AddHandler cgi-script .cgi
+```
+
+~/public_html/.envを以下の内容で作成します。
+
+```bash
+bbs_db_host = ホスト名
+bbs_db_user = ユーザ名
+bbs_db_pass = パスワード
+bbs_db_name = DB名
 ```
 
 # 使用方法
