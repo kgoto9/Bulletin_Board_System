@@ -16,12 +16,38 @@ Python 3.8
 
 MySQL Ver 8.0.21
 
-# インストール
+# 事前準備
+
+pip3コマンドをインストールします。
+
+```bash
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo python3 get-pip.py
+```
 
 pip3コマンドでmysqlclientをインストールします。
 
 ```bash
 pip3 install mysqlclient
+```
+
+userdir.confのOptionsにExecCGIを追加します。
+
+```bash
+Options ExecCGI MultiViews Indexes
+```
+
+CGIモジュールを有効にします。
+
+```bash
+sudo a2enmod cgi
+sudo systemctl restart apache2
+```
+
+~/public_html/.htaccessを作成し、以下の内容で作成します。
+
+```bash
+AddHandler cgi-script .cgi
 ```
 
 # 使用方法
