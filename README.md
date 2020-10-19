@@ -12,7 +12,7 @@
 
 Ubuntu 20.04.1 LTS
 
-Python3.8
+Python 3.8
 
 MySQL Workbench 8.0 CE
 
