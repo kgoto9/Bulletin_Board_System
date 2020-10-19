@@ -14,7 +14,7 @@ Ubuntu 20.04.1 LTS
 
 Python 3.8
 
-MySQL Workbench 8.0 CE
+MySQL Ver 8.0.21
 
 # インストール
 
@@ -29,7 +29,7 @@ pip3 install mysqlclient
 ブラウザで以下のアドレスを入力してみてください。
 
 ```bash
-http://[自分のIPアドレス]/~[ユーザ名]/bbs.py
+http://[IPアドレス]/~[ユーザ名]/bbs.py
 ```
 
 # 注意
