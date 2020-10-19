@@ -44,7 +44,7 @@ sudo a2enmod cgi
 sudo systemctl restart apache2
 ```
 
-~/public_html/.htaccessを作成し、以下の内容で作成します。
+~/public_html/.htaccessを以下の内容で作成します。
 
 ```bash
 AddHandler cgi-script .cgi
