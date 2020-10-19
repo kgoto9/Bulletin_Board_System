@@ -50,6 +50,15 @@ $ sudo systemctl restart apache2
 AddHandler cgi-script .cgi
 ```
 
+~/public_html/.envを以下の内容で作成します。
+
+```bash
+bbs_db_host = ホスト名
+bbs_db_user = ユーザ名
+bbs_db_pass = パスワード
+bbs_db_name = DB名
+```
+
 # 使用方法
 
 ブラウザで以下のアドレスを入力します。
